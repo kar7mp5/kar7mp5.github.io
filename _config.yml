@@ -22,9 +22,9 @@ title: Kar7mp5's Dev Blog
 email: tommy1005a@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is my dev blog. I will be writing about my experiences with code and other things.
-baseurl: "/dev-blog" # the subpath of your site, e.g. /blog
+baseurl: "" # dev-blog 경로는 더 이상 사용하지 않음. 모든 경로는 루트(/)에서 시작.
 url: "https://kar7mp5.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kar7mp5
+twitter_username: dev_kar7mp5
 github_username:  kar7mp5
 
 # Build settings

@@ -1,0 +1,13 @@
+<div class="post-card">
+  <a href="{{ post.url }}" style="text-decoration:none; color:inherit;">
+    {% if post.image %}
+    <div class="post-card-img" style="background-image:url('{{ post.image }}');"></div>
+    {% else %}
+    <div class="post-card-img post-card-img-default"></div>
+    {% endif %}
+    <div class="post-card-body">
+      <h3 class="post-card-title">{{ post.title }}</h3>
+      <div class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 90 }}</div>
+    </div>
+  </a>
+</div>
