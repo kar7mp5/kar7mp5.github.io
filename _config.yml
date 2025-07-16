@@ -28,7 +28,8 @@ twitter_username: kar7mp5
 github_username:  kar7mp5
 
 # Build settings
-theme: minima
+remote_theme: francescobianco/jekyll-html-pages@main
+# theme: minima (기존 테마 주석 처리)
 plugins:
   - jekyll-feed
 
