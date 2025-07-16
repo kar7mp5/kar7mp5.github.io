@@ -1,6 +1,6 @@
 ---
 title: "Kar7mp5's Dev Blog"
-layout: home
+layout: default
 ---
 
 <div style="max-width:900px; margin:0 auto; padding:2em 0 1.5em 0;">

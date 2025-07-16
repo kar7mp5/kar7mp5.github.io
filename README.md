@@ -1,55 +1,71 @@
-# kar7mp5.github.io
+# Min-Sup Kim's Blog
 
-## Test for rendering
+Welcome to the source code for Min-Sup Kim's personal blog and portfolio site!
 
-```bash
-bundle exec jekyll serve --host 0.0.0.0 --port 4000 | ca
-```
+## How to Write a Blog Post
 
-현재 Jekyll 서버가 정상적으로 실행되지 않고 있습니다.  
-로그에 다음과 같은 에러가 반복적으로 나타납니다:
+1. **Create a new post file**
+   - Go to the `_posts/` directory.
+   - Create a new file named `YYYY-MM-DD-title.md` (e.g., `2024-07-18-my-first-post.md`).
 
-```
-/usr/lib/ruby/3.0.0/socket.rb:201:in `bind': Address already in use - bind(2) for 0.0.0.0:4000 (Errno::EADDRINUSE)
-```
+2. **Add front matter**
+   - At the top of your file, add:
+     ```
+     ---
+     layout: default
+     title: "Your Post Title"
+     categories: [dev]   # or [life], [project], etc.
+     tags: [tag1, tag2]  # optional
+     ---
+     ```
 
-이 에러는 **이미 4000번 포트에서 Jekyll 서버가 실행 중**이기 때문에 새로 서버를 띄울 수 없다는 의미입니다.
+3. **Write your content**
+   - Use Markdown for formatting (headings, lists, code, etc.).
+   - Example:
+     ```markdown
+     # My First Post
+
+     This is my first blog post!
+
+     ## Section
+
+     - Bullet point
+     - Another point
+
+     ```python
+     print("Hello, world!")
+     ```
+     ```
+
+4. **Add images**
+   - Place your image in the `assets/img/` folder.
+   - Reference it in your post:
+     ```markdown
+     ![Description](/assets/img/myimage.jpg)
+     ```
+
+5. **MathJax (Math formulas)**
+   - Inline: `$E = mc^2$`
+   - Block: `$$a^2 + b^2 = c^2$$`
+
+6. **Preview locally**
+   - Run `jekyll serve --port 4001` and visit `http://localhost:4001`.
+
+7. **Commit and push**
+   - Save your file, commit, and push to GitHub. If using GitHub Pages, your post will be published automatically.
 
 ---
 
-## 해결 방법
+## Useful Folders
+- `_posts/` : Blog posts
+- `assets/img/` : Images
+- `_includes/sidebar.html` : Sidebar menu
+- `home.md`, `biography.md`, etc.: Main pages
 
-1. **기존 Jekyll 서버 프로세스 종료**
-   - 터미널에서 아래 명령어를 입력하세요:
-     ```sh
-     lsof -i :4000
-     ```
-     또는
-     ```sh
-     netstat -tulpn | grep 4000
-     ```
-   - 결과에 나온 PID(프로세스 번호)를 확인하고, 아래 명령어로 종료하세요:
-     ```sh
-     kill -9 [PID]
-     ```
-   - 여러 개가 있으면 모두 종료합니다.
-
-2. **서버 재실행**
-   - 아래 명령어로 다시 서버를 실행하세요:
-     ```sh
-     bundle exec jekyll serve --host 0.0.0.0 --port 4000
-     ```
-   - 실행 후, 브라우저에서  
-     `http://localhost:4000/2025/07/16/welcome-to-my-dev-blog.html`  
-     등으로 접속하면 정상적으로 페이지가 나와야 합니다.
+## Tips
+- To add a new page, create a `.md` file with front matter and link it in the sidebar.
+- To customize the sidebar, edit `_includes/sidebar.html`.
+- To change your profile image, replace `assets/img/profile.jpg`.
 
 ---
-
-**정리**
-- 4000번 포트에서 이미 실행 중인 서버를 모두 종료해야 새로 띄울 수 있습니다.
-- 서버가 정상적으로 실행되면, 404가 아닌 실제 블로그 글이 보일 것입니다.
-
-문제가 계속된다면,  
-- `ps aux | grep jekyll` 결과  
-- 또는 추가 에러 메시지  
-를 알려주시면 더 도와드릴 수 있습니다!
+For more details, see `HANDOFF.md` or contact the maintainer.
