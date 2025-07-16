@@ -6,6 +6,14 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/jemdoc.css">
+  <link rel="stylesheet" href="/assets/css/rouge-github.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -20,6 +28,7 @@
       {% include footer.html %}
     </div>
   </div>
+  <script src="/assets/js/code-copy.js"></script>
 </body>
 
 </html>

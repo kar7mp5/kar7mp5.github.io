@@ -1,0 +1,389 @@
+/* GitHub-like Rouge syntax highlighting */
+.highlight pre,
+pre.highlight {
+  background: #f6f8fa;
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.highlight .c {
+  color: #6a737d;
+}
+
+/* Comment */
+.highlight .err {
+  color: #d73a49;
+}
+
+/* Error */
+.highlight .k {
+  color: #d73a49;
+}
+
+/* Keyword */
+.highlight .o {
+  color: #d73a49;
+}
+
+/* Operator */
+.highlight .cm {
+  color: #6a737d;
+}
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #6a737d;
+}
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #6a737d;
+}
+
+/* Comment.Single */
+.highlight .cs {
+  color: #6a737d;
+}
+
+/* Comment.Special */
+.highlight .gd {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+/* Generic.Deleted */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.highlight .gr {
+  color: #d73a49;
+}
+
+/* Generic.Error */
+.highlight .gh {
+  color: #005cc5;
+}
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+/* Generic.Inserted */
+.highlight .go {
+  color: #6a737d;
+}
+
+/* Generic.Output */
+.highlight .gp {
+  color: #24292e;
+}
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #6f42c1;
+}
+
+/* Generic.Subheading */
+.highlight .gt {
+  color: #d73a49;
+}
+
+/* Generic.Traceback */
+.highlight .kc {
+  color: #d73a49;
+}
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #d73a49;
+}
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #d73a49;
+}
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #d73a49;
+}
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #d73a49;
+}
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #22863a;
+}
+
+/* Keyword.Type */
+.highlight .m {
+  color: #005cc5;
+}
+
+/* Literal.Number */
+.highlight .s {
+  color: #032f62;
+}
+
+/* Literal.String */
+.highlight .na {
+  color: #6f42c1;
+}
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #005cc5;
+}
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #6f42c1;
+}
+
+/* Name.Class */
+.highlight .no {
+  color: #005cc5;
+}
+
+/* Name.Constant */
+.highlight .nd {
+  color: #6f42c1;
+}
+
+/* Name.Decorator */
+.highlight .ni {
+  color: #d73a49;
+}
+
+/* Name.Entity */
+.highlight .ne {
+  color: #d73a49;
+}
+
+/* Name.Exception */
+.highlight .nf {
+  color: #6f42c1;
+}
+
+/* Name.Function */
+.highlight .nl {
+  color: #6f42c1;
+}
+
+/* Name.Label */
+.highlight .nn {
+  color: #6f42c1;
+}
+
+/* Name.Namespace */
+.highlight .nt {
+  color: #22863a;
+}
+
+/* Name.Tag */
+.highlight .nv {
+  color: #005cc5;
+}
+
+/* Name.Variable */
+.highlight .ow {
+  color: #d73a49;
+}
+
+/* Operator.Word */
+.highlight .w {
+  color: #24292e;
+}
+
+/* Text.Whitespace */
+.highlight .mb {
+  color: #005cc5;
+}
+
+/* Literal.Number.Bin */
+.highlight .mf {
+  color: #005cc5;
+}
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #005cc5;
+}
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #005cc5;
+}
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #005cc5;
+}
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #032f62;
+}
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #032f62;
+}
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #032f62;
+}
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #032f62;
+}
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #032f62;
+}
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #032f62;
+}
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #032f62;
+}
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #032f62;
+}
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #032f62;
+}
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #032f62;
+}
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #032f62;
+}
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #005cc5;
+}
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #005cc5;
+}
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #005cc5;
+}
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #005cc5;
+}
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #005cc5;
+}
+
+/* Literal.Number.Integer.Long */
+
+/* 코드블록 전체 스타일 */
+.highlight pre,
+pre.highlight {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 1em;
+  line-height: 1.5;
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 1.2em;
+}
+
+pre,
+code {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 복사 버튼 스타일 */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 2px 10px;
+  font-size: 0.92em;
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  color: #24292e;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+  box-shadow: none;
+}
+
+.copy-btn:hover,
+.copy-btn:active {
+  background: #eaecef;
+  border-color: #d1d5da;
+}
+
+/* 코드 텍스트 */
+.highlight code {
+  background: none;
+  color: #24292e;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1em;
+}
+
+/* 라인 넘버 스타일 */
+.highlight .lineno {
+  display: inline-block;
+  width: 2.2em;
+  padding-right: 0.5em;
+  color: #b3b3b3;
+  text-align: right;
+  user-select: none;
+  background: none;
+}
+
+/* Remove border from all span elements in code blocks */
+.highlight span {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
