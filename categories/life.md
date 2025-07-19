@@ -1,8 +1,5 @@
 ---
-layout: default
+layout: category
+category: life
 title: Life
 ---
-
-# Life
-
-This page is under construction. 

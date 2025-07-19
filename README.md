@@ -2,6 +2,12 @@
 
 Welcome to the source code for Min-Sup Kim's personal blog and portfolio site!
 
+## Build for test
+
+```bash
+bundle exec jekyll serve --port 4001
+```
+
 ## How to Write a Blog Post
 
 1. **Create a new post file**

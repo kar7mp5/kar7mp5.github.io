@@ -2,7 +2,7 @@
 layout: default
 title:  "Welcome to My Dev Blog!"
 date:   2025-07-16 17:06:59 +0900
-categories: jekyll update devlog
+categories: development
 permalink: /2025/07/16/welcome-to-my-dev-blog.html
 ---
 

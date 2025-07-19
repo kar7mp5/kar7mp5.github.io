@@ -1,8 +1,5 @@
 ---
-layout: default
+layout: category
+category: development
 title: Development
 ---
-
-# Development
-
-This page is under construction. 
