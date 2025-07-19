@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Biography
+title: About Me
 ---
 
-# Biography
+# About Me
 
 ## Education
 - **Inha University**, Computer Science Engineering (2023.03 ~ Present)
