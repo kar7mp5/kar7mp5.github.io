@@ -1,9 +1,9 @@
 ---
 layout: default
 title:  "유도 법칙에 대한 고찰: 최적 제어 관점에서 바라본 비례 항법 시뮬레이션"
-date:   2025-07-21 17:06:59 +0900
+date:   2025-07-20 20:06:59 +0900
 categories: development
-permalink: /2025/07/21/missile_simulation.html
+permalink: /2025/07/21/missile-simulation.html
 ---
 
 # 유도 법칙에 대한 고찰: 최적 제어 관점에서 바라본 비례 항법 시뮬레이션
