@@ -15,7 +15,7 @@ permalink: /20250721/missile-simulation.html
 
 ## 시뮬레이션 결과
 
-![missile simulation result](./missile_simulation.gif)
+![missile simulation result](../assets/posts/2025-07-21-missile-simulation/missile_simulation.gif)
 
 
 ## 1. 시뮬레이션 동적 시스템 모델링
