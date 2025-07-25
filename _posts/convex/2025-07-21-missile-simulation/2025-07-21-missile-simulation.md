@@ -1,12 +1,12 @@
 ---
 layout: default
-title:  "유도 법칙에 대한 고찰: 최적 제어 관점에서 바라본 비례 항법 시뮬레이션"
+title:  "2D 비례 항법 미사일 시뮬레이션"
 date:   2025-07-20 20:06:59 +0900
-categories: development
+categories: convex
 permalink: /20250721/missile-simulation.html
 ---
 
-# [Convex Optimization] 2D 비례 항법 시뮬레이션
+# 2D 비례 항법 미사일 시뮬레이션
 
 ## 제작 동기
 
