@@ -9,7 +9,8 @@ permalink: /20250808/smart-pointer.html
 # [C++] Smart Pointer (auto_ptr, unique_ptr, shared_ptr, week_ptr)
 
 > **참고자료**  
-> [C++ 공식문서](https://cplusplus.com/reference/memory/) > [GeeksforGeeks](https://www.geeksforgeeks.org/cpp/smart-pointers-cpp/)
+> [C++ 공식문서](https://cplusplus.com/reference/memory/)  
+> [GeeksforGeeks](https://www.geeksforgeeks.org/cpp/smart-pointers-cpp/)
 
 ## 일반 포인터 문제점
 
@@ -41,11 +42,11 @@ permalink: /20250808/smart-pointer.html
 
 이름 그대로 다이나믹하게 할당하고, 스코프를 벗어나면 자동 할당 해제가 된다.
 
-```cpp title:Syntax
+```cpp
 auto_ptr <type> name;
 ```
 
-```cpp title:Example
+```cpp
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -64,7 +65,7 @@ int main() {
 }
 ```
 
-```title:Output
+```
 10
 10
 ```
@@ -75,7 +76,7 @@ int main() {
 
 `unique_ptr`은 하나의 포인터가 한번만 사용된다. 그래서 `unique_ptr`를 복사할 수 없고, `move()` 메소드로 권한 이동이 가능하다.
 
-```cpp title:Example
+```cpp
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -106,7 +107,7 @@ int main() {
 }
 ```
 
-```title:Output
+```
 50
 50
 ```
@@ -119,7 +120,7 @@ int main() {
 
 `shared_ptr`는 같은 object에 여러 포인터를 할당할 수 있다. 참조한 개수는 `use_count()` 메소드를 통하여, 확인 가능하다.
 
-```cpp title:Example
+```cpp
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -153,7 +154,7 @@ int main() {
 }
 ```
 
-```title: Output
+```
 50
 50
 50
@@ -168,7 +169,7 @@ int main() {
 
 `weak_ptr`은 object에 대해서 소유권을 가지지 않고 참조한다. `shared_ptr`과 유사하지만 강한 참조를 하지 않는다. 위에서 언급되었듯, 순환참조를 방지하기 위해서 이다.
 
-```cpp title:Example
+```cpp
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -202,7 +203,7 @@ int main() {
 }
 ```
 
-```title:Output
+```
 50
 1
 ```
