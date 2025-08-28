@@ -1,3 +1,11 @@
+---
+layout: default
+title: "PID Control System"
+date: 2025-08-29 00:05:00 +0900
+categories: control
+permalink: /20250829/2025-08-29-pid-control.html
+---
+
 # PID Control System 정의
 
 [**PID (Proportional Integral Differential)**](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller)는 피드백 기반 제어 알고리즘이다.  
