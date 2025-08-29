@@ -81,3 +81,89 @@ $$
 $$
 T_d = \frac{K_d}{K_p}
 $$
+
+# Mass Spring Damper 예제
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+Kp = 40.0  # Proportional Gain
+Ki = 35.0  # Integral Gain
+Kd = 10.0  # Derivative Gain
+
+# System: Mass-Spring-Damper
+m = 1.0  # Mass (kg)
+k = 20.0 # Spring constant (N/m)
+c = 2.0  # Damping coefficient (Ns/m)
+
+# Simulation Parameters
+dt = 0.01
+total_time = 10.0
+steps = int(total_time / dt)
+setpoint = 1.0
+
+
+def run_simulation(gains, system_params):
+    kp, ki, kd = gains
+    m, k, c = system_params
+
+    # Initialize state
+    y = 0.0
+    y_dot = 0.0
+    integral = 0.0
+    prev_err = 0.0
+
+    # Data log
+    y_history = []
+
+    for _ in range(steps):
+        # 1. Calculate Error
+        err = setpoint - y
+
+        # 2. Calculate Integral and Derivative terms
+        integral += err * dt
+        derivative = (err - prev_err) / dt
+
+        # 3. Calculate PID Control Input (u)
+        u = kp * err + ki * integral + kd * derivative
+        prev_err = err
+
+        # 4. Update System Model based on physics
+        # m*a + c*v + k*x = u  =>  a = (u - c*v - k*x) / m
+        y_ddot = (u - c * y_dot - k * y) / m  # Acceleration
+        y_dot += y_ddot * dt                  # Velocity
+        y += y_dot * dt                       # Position
+
+        y_history.append(y)
+
+    return y_history
+
+
+y_p_only = run_simulation((Kp, 0, 0), (m, k, c))
+
+# Run PD simulation
+y_pd = run_simulation((Kp, 0, Kd), (m, k, c))
+
+# Run full PID simulation
+y_pid = run_simulation((Kp, Ki, Kd), (m, k, c))
+
+# Time vector for plotting
+t_his = np.arange(0, total_time, dt)
+
+plt.figure(figsize=(10, 6))
+plt.plot(t_his, [setpoint] * steps, 'r--', linewidth=2, label='Setpoint')
+plt.plot(t_his, y_p_only, linewidth=2, label=f'P-Only Control (Kp={Kp})')
+plt.plot(t_his, y_pd, linewidth=2, label=f'PD Control (Kp={Kp}, Kd={Kd})')
+plt.plot(t_his, y_pid, 'g-', linewidth=3, label=f'Full PID Control (Kp={Kp}, Ki={Ki}, Kd={Kd})')
+
+plt.title('PID Parameter Tuning Process', fontsize=16)
+plt.xlabel('Time (s)', fontsize=12)
+plt.ylabel('Position (m)', fontsize=12)
+plt.grid(True)
+plt.legend(fontsize=12)
+plt.xlim(0, total_time)
+plt.tight_layout()
+plt.show()
+```
