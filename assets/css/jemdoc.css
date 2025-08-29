@@ -42,6 +42,12 @@ nav {
   margin-bottom: 2em;
 }
 
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 footer {
   color: #888;
   font-size: 0.9em;
