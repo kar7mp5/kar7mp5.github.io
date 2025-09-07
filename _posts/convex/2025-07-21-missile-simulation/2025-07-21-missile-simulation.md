@@ -2,6 +2,7 @@
 layout: default
 title:  "2D 비례 항법 미사일 시뮬레이션"
 date:   2025-07-20 20:06:59 +0900
+image: ../assets/posts/2025-07-21-missile-simulation/missile_simulation.gif
 categories: convex
 permalink: /20250721/missile-simulation.html
 ---

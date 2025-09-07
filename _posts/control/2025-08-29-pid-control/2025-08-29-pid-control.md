@@ -2,6 +2,7 @@
 layout: default
 title: "PID Control System"
 date: 2025-08-29 00:05:00 +0900
+image: ../assets/posts/2025-08-29-pid-control/pid-parameter-plot.png
 categories: control
 permalink: /20250829/2025-08-29-pid-control.html
 ---
