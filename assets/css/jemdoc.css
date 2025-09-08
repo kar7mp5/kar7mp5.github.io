@@ -27,13 +27,64 @@ a:hover {
   text-decoration: underline;
 }
 
-pre,
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+caption {
+  caption-side: bottom;
+  text-align: left;
+  padding: 10px 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+pre {
+  background: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  padding: 1em;
+  border-radius: 4px;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  white-space: pre;
+  overflow-x: auto;
+}
+
 code {
   background: #f4f4f4;
   border: 1px solid #e0e0e0;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 95%;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
 }
 
 nav {
