@@ -7,25 +7,36 @@ title: Blog
 
 <ul style="list-style: none; padding: 0;">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}" style="display: flex; align-items: flex-start; gap: 20px; text-decoration: none; color: inherit; padding: 20px 0;">
+  <li>
+    <a href="{{ post.url }}"
+       style="display: flex; align-items: flex-start; gap: 20px; text-decoration: none; color: inherit; padding: 20px 0;">
 
-        {% if post.image %}
-        <div style="width: 120px; flex-shrink: 0;">
-          <img src="{{ post.image }}" alt="{{ post.title }}" style="width: 100%; height: 90px; object-fit: cover; border-radius: 4px;">
+      {% if post.image %}
+      <div style="width: 120px; flex-shrink: 0;">
+        <img src="{{ post.image }}" alt="{{ post.title }}"
+             style="width: 100%; height: 90px; object-fit: cover; border-radius: 4px;">
+      </div>
+      {% endif %}
+
+      <div style="flex-grow: 1;">
+        <h2 style="margin: 0 0 5px 0; font-size: 1.2em;">{{ post.title }}</h2>
+        <p style="margin: 0 0 8px 0; font-size: 0.9em; color: #555;">
+          {{ post.excerpt | strip_html | truncatewords: 50 }}
+        </p>
+
+        <div style="margin-bottom: 8px;">
+          {% for category in post.categories %}
+            <span style="display: inline-block; background-color: #e0e0e0; color: #333; padding: 2px 8px; margin-right: 5px; border-radius: 12px; font-size: 0.75em;">
+              #{{ category }}
+            </span>
+          {% endfor %}
         </div>
-        {% endif %}
+        <span style="color:#888; font-size:0.8em;">{{ post.date | date: '%Y-%m-%d' }}</span>
+      </div>
 
-        <div style="flex-grow: 1;">
-          <h2 style="margin: 0 0 5px 0; font-size: 1.2em;">{{ post.title }}</h2>
-          <p style="margin: 0 0 8px 0; font-size: 0.9em; color: #555;">
-            {{ post.excerpt | strip_html | truncatewords: 25 }}
-          </p>
-          <span style="color:#888; font-size:0.8em;">{{ post.date | date: '%Y-%m-%d' }}</span>
-        </div>
+    </a>
 
-      </a>
-    </li>
-    <hr style="border: 0; border-top: 1px solid #eee;">
+  </li>
+  <hr style="border: 0; border-top: 1px solid #eee;">
   {% endfor %}
 </ul>
