@@ -1,5 +1,5 @@
 ---
 layout: category
-category: convex optimization
+category: convex_optimization
 title: Convex Optimization
 ---
