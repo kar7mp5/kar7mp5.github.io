@@ -1,5 +1,5 @@
 ---
 layout: category
-category: control
-title: Control
+category: control system
+title: Control System
 ---
