@@ -71,16 +71,21 @@ def update(self, total_thrust, torques, dt):
 
 병진 운동은 드론의 무게 중심이 3차원 공간(X, Y, Z)에서 어떻게 움직이는지를 설명하며, 이는 뉴턴의 운동 제2법칙 $F=ma$에 의해 지배됩니다. 드론의 가속도($\dot{p}$)를 결정하기 위해, 우리는 드론에 작용하는 모든 힘을 알아야 합니다.
 
-$$m\dot{p} = F_{total} = F_{gravity} + F_{thrust} + F_{drag}$$
+$$
+m\dot{p} = F_{total} = F_{gravity} + F_{thrust} + F_{drag}
+$$
 
 ### **1.1. 중력 ($F_{gravity}$)**
 
 가장 간단한 힘으로, 항상 지구 중심 방향(월드 좌표계의 -Z축)으로 일정하게 작용합니다.
 
-- **수식**:
-  $$F_{gravity} = \begin{pmatrix} 0 \\ 0 \\ -mg \end{pmatrix}$$
+- **수식**
 
-- **코드**:
+  $$
+  F_{gravity} = \begin{pmatrix} 0 \\ 0 \\ -mg \end{pmatrix}
+  $$
+
+- **코드**
 
 ```python
 gravity_force = np.array([0, 0, -self.mass * self.g])
@@ -93,11 +98,15 @@ gravity_force = np.array([0, 0, -self.mass * self.g])
 **핵심은 추력이 항상 드론의 동체(Body Frame)를 기준으로 Z축 방향으로 작용한다는 것입니다**  
 드론이 수평일 때는 수직으로 위를 향하지만, 드론이 앞으로 기울어지면 추력 벡터도 함께 앞으로 기울어집니다. 이 기울어진 추력 벡터가 수평 방향의 힘을 만들어내어 드론을 전후좌우로 움직이게 합니다.
 
-- **수식**:
-  $$F_{thrust} = R \begin{pmatrix} 0 \\ 0 \\ T \end{pmatrix}$$
-  여기서 $T$는 4개 프로펠러가 만들어내는 총 추력의 크기이며, $[0, 0, T]^T$는 드론 동체 기준의 추력 벡터입니다. 회전 행렬 $R \\in SO(3)$는 이 동체 기준의 힘을 우리가 보는 월드 좌표계의 힘으로 변환하는 역할을 합니다.
+- **수식**
 
-- **코드**:
+  $$
+  F_{thrust} = R \begin{pmatrix} 0 \\ 0 \\ T \end{pmatrix}
+  $$
+
+  여기서 $T$는 4개 프로펠러가 만들어내는 총 추력의 크기이며, $[0, 0, T]^T$는 드론 동체 기준의 추력 벡터입니다. 회전 행렬 $R \in SO(3)$는 이 동체 기준의 힘을 우리가 보는 월드 좌표계의 힘으로 변환하는 역할을 합니다.
+
+- **코드**
 
 ```python
 # R은 self.orientation (쿼터니언) 으로부터 계산된 회전 행렬
@@ -109,11 +118,15 @@ thrust_vector = R @ np.array([0, 0, total_thrust])
 
 공기 저항을 모델링한 힘입니다. 드론의 속도($v$)에 반대 방향으로 작용하며, 속도가 빠를수록 커지는 특징이 있습니다. 일반적으로 속도의 제곱에 비례하는 모델을 사용합니다.
 
-- **수식**:
-  $$F_{drag} = -k_d \cdot v \cdot \|v\|$$
-  $k\_d$는 항력 계수(drag coefficient)입니다.
+- **수식**
 
-- **코드**:
+  $$
+  F_{drag} = -k_d \cdot v \cdot \|v\|
+  $$
+
+  $k_d$는 항력 계수(drag coefficient)입니다.
+
+- **코드**
 
 ```python
 drag_force = -self.drag_coeff * self.velocity * np.linalg.norm(self.velocity)
@@ -123,7 +136,7 @@ drag_force = -self.drag_coeff * self.velocity * np.linalg.norm(self.velocity)
 
 ---
 
-### \#\# 2. 회전 운동: 드론은 어떻게 자세를 바꾸는가?
+### 2. 회전 운동: 드론은 어떻게 자세를 바꾸는가?
 
 회전 운동은 드론의 자세, 즉 기울기가 어떻게 변하는지를 설명하며, 이는 오일러의 회전 운동 방정식에 의해 기술됩니다.
 
@@ -131,8 +144,10 @@ drag_force = -self.drag_coeff * self.velocity * np.linalg.norm(self.velocity)
 
 토크($\tau$, 비트는 힘)가 관성 행렬($I$)과 각가속도($\dot{\omega}$)에 미치는 영향을 설명합니다.
 
-- **수식**:
-  $$I\dot{\omega} + \omega \times (I\omega) = \tau$$
+- **수식**
+  $$
+  I\dot{\omega} + \omega \times (I\omega) = \tau
+  $$
 - $\tau$: 제어 입력으로, 4개의 모터 회전 속도를 미세하게 조절하여 롤(roll), 피치(pitch), 요(yaw) 방향의 토크를 만들어냅니다. 이것이 드론의 자세를 바꾸는 원동력입니다.
 - $I\dot{\omega}$: 관성에 의해 회전을 시작하거나 멈추는 데 필요한 토크를 의미합니다.
 - $\omega \times (I\omega)$: **자이로스코픽 효과(Gyroscopic Effect)**라 불리는 비선형 항입니다. 회전하는 물체는 그 회전축을 유지하려는 성질이 있는데, 이 항이 바로 그 효과를 모델링합니다. 빠르게 도는 팽이가 잘 쓰러지지 않는 것과 같은 원리이며, 드론의 회전 안정성에 중요한 역할을 합니다.
@@ -143,7 +158,7 @@ drag_force = -self.drag_coeff * self.velocity * np.linalg.norm(self.velocity)
 
 이를 피하기 위해, 본 시뮬레이션에서는 수학적으로 더 안정적인 **쿼터니언(Quaternion)**을 사용하여 자세를 표현하고 업데이트합니다.
 
-- **코드**:
+- **코드**  
   `scipy.spatial.transform.Rotation` 라이브러리는 이러한 복잡한 쿼터니언 연산을 내부적으로 처리해줍니다. 현재 자세(`self.orientation`)에서 각속도(`self.angular_velocity`)로 `dt`초 만큼 회전했을 때의 다음 자세를 계산합니다.
 
 ```python
