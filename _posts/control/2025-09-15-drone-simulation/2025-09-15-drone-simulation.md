@@ -2,14 +2,17 @@
 layout: default
 title: "6-DOF drone simulation with PID controller"
 date: 2025-09-15 00:05:00 +0900
-image: ../assets/posts/2025-09-15-drone-simulation/drone-result.mp4
+# image: ../assets/posts/2025-09-15-drone-simulation/drone-result.mp4
 categories: control_system
 permalink: /20250829/2025-09-15-drone-simulation.html
 ---
 
 # 6-DOF drone simulation with PID controller
 
-![drone result](../assets/posts/2025-09-15-drone-simulation/drone-result.mp4)
+<video controls>
+  <source src="../assets/posts/2025-09-15-drone-simulation/drone-result.mp4" type="video/mp4">
+  브라우저가 비디오 태그를 지원하지 않습니다.
+</video>
 
 ### **6-DOF 쿼드콥터의 자율 비행을 위한 계층적 모션 플래닝 및 제어 시스템 설계 및 시뮬레이션 검증**
 
