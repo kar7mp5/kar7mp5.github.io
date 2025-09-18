@@ -236,6 +236,8 @@ prob = cp.Problem(objective, constraints)
 prob.solve(solver=cp.OSQP)
 ```
 
+---
+
 ## 3. 피드백 제어(PID Control)
 
 계획된 궤적을 정확히 추종하기 위해 비선형 피드백 제어기인 기하학적 제어기를 사용한다. 이 제어기는 드론의 회전 그룹 SO(3)의 구조를 직접 활용하여 큰 자세 오차에 대해서도 안정적인 성능을 보인다.
@@ -317,6 +319,8 @@ def objective_function(gains):
 result = minimize(objective_function, initial_gains, method='Nelder-Mead', ...)
 best_gains = result.x
 ```
+
+---
 
 ## 전체코드
 
