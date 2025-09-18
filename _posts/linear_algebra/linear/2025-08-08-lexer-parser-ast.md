@@ -145,7 +145,13 @@ $$
 행렬에서 자주 사용하는 수식이다.
 
 $$
-\mathbf{e}^T_i\mathbf{a} = \mathbf{a}_i \quad \text{(picks out ith entry)} \\
-\mathbf{1}^T\mathbf{a} = \mathbf{a}_1 + \dots + \mathbf{a}_n \quad \text{(sum of entries)} \\
+\mathbf{e}^T_i\mathbf{a} = \mathbf{a}_i \quad \text{(picks out ith entry)}
+$$
+
+$$
+\mathbf{1}^T\mathbf{a} = \mathbf{a}_1 + \dots + \mathbf{a}_n \quad \text{(sum of entries)}
+$$
+
+$$
 \mathbf{a}^T\mathbf{a} = \mathbf{a}^2_i + \dots + \mathbf{a}^2_n \quad \text{(sum of squares of enties)}
 $$
