@@ -4,7 +4,7 @@ title: "Linear functions"
 date: 2025-09-19 00:00:00 +0900
 image: ../assets/posts/2025-09-19-linear-algebra-base-w2/linear_verus_affine.png
 categories: linear_algebra
-permalink: /20250808/linear-algebra-base-w2.html
+permalink: /20250808/norm-distance.html
 ---
 
 # Linear functions
