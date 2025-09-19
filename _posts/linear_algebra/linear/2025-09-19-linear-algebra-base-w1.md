@@ -6,6 +6,8 @@ categories: linear_algebra
 permalink: /20250919/linear-algebra-base-w1.html
 ---
 
+This blog is based on [Jong-han Kim's Linear Algebra](https://jonghank.github.io/ase2910.html)
+
 # Linear Algebra: 행렬 기초 연산
 
 ## Block Vectors
