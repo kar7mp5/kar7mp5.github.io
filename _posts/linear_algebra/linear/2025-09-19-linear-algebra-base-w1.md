@@ -3,7 +3,7 @@ layout: default
 title: "Linear Algebra: 행렬 기초 연산"
 date: 2025-09-19 00:00:00 +0900
 categories: linear_algebra
-permalink: /20250808/lexer-parser-ast.html
+permalink: /20250919/linear-algebra-base-w1.html
 ---
 
 # Linear Algebra: 행렬 기초 연산
@@ -96,9 +96,9 @@ $$
 
 ## Linear combinations
 
-vectors $\mathbf{a}_1, \dots, \mathbf{a}_m$, scalars $\beta_1, \dots,\beta_m$ 의 linear combination은 $\beta_1\mathbf{a}_1 + \dots + \beta_m\mathbf{a}_m$ 이다.  
+vectors $\mathbf{a}_1, \dots, \mathbf{a}_m$, scalars $\beta_1, \dots,\beta_m$ 의 linear combination은 $\beta_1\mathbf{a}_1 + \dots + \beta_m\mathbf{a}_m$ 이다.
 
-e.g., for any n-vector $\mathbf{b}$  
+e.g., for any n-vector $\mathbf{b}$
 
 $$
 \mathbf{b} = \mathbf{b}_1\mathbf{e}_1 + \dots + \mathbf{b}_n\mathbf{e}_n
@@ -108,15 +108,15 @@ $$
 
 ## Linear product
 
-Inner product (or dot product) of n-vectors $\mathbf{a}$ and $\mathbf{b}$ is  
+Inner product (or dot product) of n-vectors $\mathbf{a}$ and $\mathbf{b}$ is
 
 $$
 \mathbf{a}^T\mathbf{b} = \mathbf{a}_1\mathbf{b}_1 + \dots + \mathbf{a}_n\mathbf{b}_n
 $$
 
-다른 notation: $<a, b>,\ <a \vert b>,\ (a, b),\ a \cdot b$  
+다른 notation: $<a, b>,\ <a \vert b>,\ (a, b),\ a \cdot b$
 
-e.g.,  
+e.g.,
 
 $$
 \begin{bmatrix} -1 \\2 \\2 \end{bmatrix}^T
@@ -132,7 +132,7 @@ $$
 - $(\gamma\mathbf{a})^T\mathbf{b} = \gamma(\mathbf{a}^T\mathbf{b})$
 - $(\mathbf{a}+\mathbf{b})^T\mathbf{c} = \mathbf{a}^T\mathbf{c}+\mathbf{b}^T\mathbf{c}$
 
-e.g.,  
+e.g.,
 
 $$
 (\mathbf{a}+\mathbf{b})^T (\mathbf{c}+\mathbf{d}) = \mathbf{a}^T\mathbf{c}+\mathbf{a}^T\mathbf{d}+\mathbf{b}^T\mathbf{c}+\mathbf{b}^T\mathbf{d}
