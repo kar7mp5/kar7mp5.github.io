@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Linear Algebra: 행렬 기초 연산"
+title: "Vectors: Basic Operations"
 date: 2025-09-19 00:00:00 +0900
 categories: linear_algebra
 permalink: /20250919/linear-algebra-base-w1.html
 ---
 
-# Linear Algebra: 행렬 기초 연산
+# Vectors: Basic Operations
 
 This blog is based on [Jong-han Kim's Linear Algebra](https://jonghank.github.io/ase2910.html)
 
