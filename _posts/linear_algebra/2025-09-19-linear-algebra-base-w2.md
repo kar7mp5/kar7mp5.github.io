@@ -1,14 +1,15 @@
 ---
 layout: default
-title: "Linear Algebra: 행렬 기초 연산"
+title: "Linear Algebra: Linear functions"
 date: 2025-09-19 00:00:00 +0900
+image: ../assets/posts/2025-09-19-linear-algebra-base-w2/linear_verus_affine.png
 categories: linear_algebra
 permalink: /20250808/linear-algebra-base-w2.html
 ---
 
-This blog is based on [Jong-han Kim's Linear Algebra](https://jonghank.github.io/ase2910.html)
-
 # Linear Algebra: Linear functions
+
+This blog is based on [Jong-han Kim's Linear Algebra](https://jonghank.github.io/ase2910.html)
 
 ## Superposition and linear functions
 
@@ -21,7 +22,7 @@ $$
 
 - A function that satisfies superposition is called [`linear`](https://en.wikipedia.org/wiki/Linear_function)
 
-![linear verus affine]()
+![linear verus affine](../assets/posts/2025-09-19-linear-algebra-base-w2/linear_verus_affine.png)
 
 ---
 
@@ -79,7 +80,7 @@ holds for all $\alpha, \beta$ with $\alpha + \beta = 1$, and all $n$-vectors $x,
 ## First-order Taylor approximation
 
 suppose $f: \mathbf{R}^n \rightarrow \mathbf{R}$  
-`first-order Taylor approximation` of $f$, near point $z$:
+[`first-order Taylor approximation`](https://en.wikipedia.org/wiki/Taylor%27s_theorem) of $f$, near point $z$:
 
 $$
 \hat{f}(x) = f(z) + \frac{\partial f}{\partial x_1}(z)(x_1 - z_1) + \dots + \frac{\partial f}{\partial x_n}(z)(x_n - z_n)
