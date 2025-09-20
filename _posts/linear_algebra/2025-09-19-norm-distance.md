@@ -229,7 +229,7 @@ $$
 \lvert\mathbf{a}^T\mathbf{b}\rvert \leq \lVert\mathbf{a}\rVert\lVert\mathbf{b}\rVert
 $$
 
-This is true because the geometric definition of the dot product is $\|\mathbf{a}\|\|\mathbf{b}\|\cos(\theta)$, and the absolute value $|\cos(\theta)|$ cannot exceed 1. Written out in terms of their components, the inequality is:
+This is true because the geometric definition of the dot product is $\lVert\mathbf{a}\rVert\lVert\mathbf{b}\rVert\cos(\theta)$, and the absolute value $\lvert\cos(\theta)\rvert$ cannot exceed 1. Written out in terms of their components, the inequality is:
 
 $$
 |a_1b_1 + \dots + a_nb_n| \leq (a^2_1 + \dots + a^2_n)^{1/2}(b^2_1 + \dots + b^2_n)^{1/2}
