@@ -2,7 +2,6 @@
 layout: default
 title: "Norm and distance"
 date: 2025-09-20 09:00:00 +0900
-image: https://i.sstatic.net/wf86g.png
 categories: linear_algebra
 permalink: /20250919/norm-distance.html
 ---
