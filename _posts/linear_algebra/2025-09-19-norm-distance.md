@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Norm and distance"
-date: 2025-09-19 17:00:00 +0900
+date: 2025-09-20 09:00:00 +0900
+image: https://i.sstatic.net/wf86g.png
 categories: linear_algebra
 permalink: /20250919/norm-distance.html
 ---
@@ -264,3 +265,76 @@ $$
 $$
 
 ---
+
+## Derivation of Cauchy-Schwarz inequality
+
+It's cleary true if either $a$ or $b$ is $0$  
+so assume $\alpha = \lVert a\rVert$ and $\beta = \lVert b\rVert$ are nonzero.  
+We have
+
+$$
+\begin{align*}
+0 &\leq \lVert\beta a-\alpha b\rVert^2 \\
+&= \lVert\beta a\rVert^2 - 2(\beta a)^T(\alpha b) + \lVert\alpha b\rVert^2 \\
+&= \beta^2\lVert a\rVert^2 - 2\beta\alpha(a^Tb) + \alpha^2\lVert b\rVert^2 \\
+&= 2\lVert a\rVert^2\lVert b\rVert^2 - 2\lVert a\rVert\lVert b\rVert(a^Tb)
+\end{align*}
+$$
+
+divide by $2\lVert a\rVert\lVert b\rVert$ to get $a^Tb \leq \lVert a\rVert\lVert b\rVert$
+
+---
+
+## Angle
+
+Angle between two nonzero vectors $a, b$ defined as
+
+$$
+\angle(a,b) = \arccos{\left(\frac{a^Tb}{\lVert a\rVert\lVert b\rVert}\right)}
+$$
+
+- $\angle(a, b)$ is the number in $[0, \pi]$ that satisfies
+
+$$
+a^Tb = \lVert a\rVert\lVert b\rVert \cos{(\angle(a, b))}
+$$
+
+coincides with ordinary angle between vectors in 2D and 3D.
+
+### Classification of angles
+
+$$
+\theta = \angle(a,b)
+$$
+
+- $\theta = \pi/2$: $a$ and $b$ are orthogonal, written $a \perp b \ (a^Tb = 0)$
+- $\theta = 0$: $a$ and $b$ are aligned $(a^Tb = \lVert a\rVert\lVert b\rVert)$
+- $\theta = \pi$: $a$ and $b$ are anti-aligned $(a^Tb = -\lVert a\rVert\lVert b\rVert)$
+- $\theta \leq \pi/2$: $a$ and $b$ make an acute angle $(a^Tb \geq 0)$
+- $\theta \geq \pi/2$: $a$ and $b$ make an obtuse angle $(a^Tb \leq 0)$
+
+---
+
+## Spherical distance
+
+if $a, b$ are on sphere of radius $\mathbf{R}$, distance along the sphere is $\mathbf{R}\angle(a, b)$
+
+![spherical distance image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Illustration_of_great-circle_distance.svg/250px-Illustration_of_great-circle_distance.svg.png)
+
+[Source: Wikipedia Great-circle distance](https://en.wikipedia.org/wiki/Great-circle_distance)
+
+---
+
+## Correlation coefficient
+
+vectors $a$ and $b$, and de-meaned vectors
+
+$$
+\tilde{a} = a - \mathbf{avg}(a)\mathbf{1}, \quad \tilde{b} = b - \mathbf{avg}(b)\mathbf{1}
+$$
+
+correlation coefficient (between $a$ and $b$, with $\tilde{a} \neq 0, \tilde{b} \neq 0$)
+
+$$
+\rho = \frac{\tilde{a}^T\tilde{b}}{\lVert \tilde{a}\rVert\lVert \tilde{b}\rVert}
+$$
