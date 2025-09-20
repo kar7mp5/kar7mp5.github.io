@@ -74,11 +74,7 @@ This project is a from-scratch implementation of a GPT model based on the "Atten
 
 **`Mar 2025 – Apr 2025`** \| [**GitHub Repository**](https://github.com/kar7mp5/SurvivalRL) \| [**Blog**](https://kar7mp5.tistory.com/entry/Reinforcement-Learning-Python-Matplotlib%EC%9C%BC%EB%A1%9C-%EC%83%9D%ED%83%9C%EA%B3%84-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
 
-This is a project where an AI agent learns to survive on its own in a 3D survival shooting game. Using the PPO (Proximal Policy Optimization) algorithm, the agent discovers the optimal strategy for shooting enemies and dodging bullets.
-
-#### Objective
-
-To develop an AI that can survive by eliminating enemies in a 3D environment.
+This project is an ecosystem simulation where AI agents learn survival strategies. Using reinforcement learning, agents autonomously discover optimal policies to maximize their survival rate in a virtual environment by performing actions such as foraging for food and evading predators.
 
 #### Core Technologies
 
