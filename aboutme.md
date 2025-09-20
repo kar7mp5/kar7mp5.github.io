@@ -38,7 +38,7 @@ title: About Me
 
 ### Genetic Algorithm-Based Autonomous Drone Simulation
 
-**`Jan 2024 – Feb 2024`** | **[GitHub Repository](https://github.com/kar7mp5/Drone_Simulation)**
+**`Jan 2024 – Feb 2024`** \| **[GitHub Repository](https://github.com/kar7mp5/Drone_Simulation)**
 
 In this project, I developed a 2D drone simulator from scratch using Pygame, designed to navigate a drone to a target destination while avoiding obstacles. To discover the optimal flight path, a **Genetic Algorithm** was implemented to solve the control problem.
 
@@ -59,7 +59,7 @@ In this project, I developed a 2D drone simulator from scratch using Pygame, des
 
 ### MinGPT: An LLM Implementation Based on 'Attention Is All You Need'
 
-**`Mar 2024 – Jun 2024`** | **[GitHub Repository](https://github.com/kar7mp5/MinGPT)**
+**`Mar 2024 – Jun 2024`** \| **[GitHub Repository](https://github.com/kar7mp5/MinGPT)**
 
 This project is a from-scratch implementation of a GPT model based on the "Attention Is All You Need" paper. The primary goal was to develop a deep, functional understanding of the Transformer architecture by translating its fundamental components into code.
 
@@ -76,7 +76,7 @@ This project is a from-scratch implementation of a GPT model based on the "Atten
 
 ### SurvivalRL: Reinforcement Learning
 
-`2025.03-04` | [**GitHub Repository**](https://github.com/kar7mp5/SurvivalRL) | [**Tistory Blog**](https://kar7mp5.tistory.com/entry/Reinforcement-Learning-Python-Matplotlib%EC%9C%BC%EB%A1%9C-%EC%83%9D%ED%83%9C%EA%B3%84-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+`2025.03-04` \| [**GitHub Repository**](https://github.com/kar7mp5/SurvivalRL) \| [**Tistory Blog**](https://kar7mp5.tistory.com/entry/Reinforcement-Learning-Python-Matplotlib%EC%9C%BC%EB%A1%9C-%EC%83%9D%ED%83%9C%EA%B3%84-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
 
 This is a project where an AI agent learns to survive on its own in a 3D survival shooting game. Using the PPO (Proximal Policy Optimization) algorithm, the agent discovers the optimal strategy for shooting enemies and dodging bullets.
 
