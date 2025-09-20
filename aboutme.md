@@ -7,28 +7,30 @@ title: About Me
 
 ## Education
 
-- **Inha University**, Computer Science Engineering (2023.03 ~ Present)
+- **Inha University**, Computer Science Engineering (Mar. 2023 – Present)
 
 ## Experiences
 
-- **Google Machine Learning Bootcamp, 5th** (2024.07-11)
-- **Undergraduate research student in nursing department** (2024.10-12)
-- **Undergraduate research student in aerospace engineering** (2025.01~Present)
+- **Google Machine Learning Bootcamp, 5th** (Jul. 2024 – Nov. 2024)
+- **Undergraduate Research Student, Department of Nursing** (Oct. 2024 – Dec. 2024)
+- **Undergraduate Research Student, Department of Aerospace Engineering** (Jan. 2025 – Present)
 
 ## OpenSource
 
-### Python Libraries
+### Korean News Scraper
 
-- **Korean News Scraper** - 2024.03 - [Project Link](https://github.com/kar7mp5/korean-news-scraper)
+**`Apr 2024`** \| **[GitHub Repository](https://github.com/kar7mp5/korean-news-scraper)**
 
-  Developed and deployed a Python library for collecting data to train Large Language Models (LLM).
-  This was my first Python library, and while there were many areas to improve, it was a great experience learning about Python deployment and automation.
+Developed and deployed a Python library for collecting data to train Large Language Models (LLM).  
+This was my first Python library, and while there were many areas to improve, it was a great experience learning about Python deployment and automation.
 
-- **Notion News Crawler** - 2024.07 - [Project Link](https://github.com/kar7mp5/notion-news-crawler), [Blog](https://kar7mp5.tistory.com/)
+### Notion News Crawler
 
-  Developed a crawler for collecting news by category from Notion.
-  During development, access to Notion's database was challenging, leading to the creation of a Python library for better integration.
-  I set up a server running on a Raspberry Pi that works every 4 hours to upload relevant news to Notion.
+**`Jul 2024`** \| **[GitHub Repository](https://github.com/kar7mp5/notion-news-crawler)**, **[Blog](https://kar7mp5.tistory.com/)**
+
+Developed a crawler for collecting news by category from Notion.
+During development, access to Notion's database was challenging, leading to the creation of a Python library for better integration.
+I set up a server running on a Raspberry Pi that works every 4 hours to upload relevant news to Notion.
 
 ## Projects
 
@@ -70,7 +72,7 @@ This project is a from-scratch implementation of a GPT model based on the "Atten
 
 ### SurvivalRL: Reinforcement Learning
 
-**`Mar 2025 – Apr 2025`** \| [**GitHub Repository**](https://github.com/kar7mp5/SurvivalRL) \| [**Tistory Blog**](https://kar7mp5.tistory.com/entry/Reinforcement-Learning-Python-Matplotlib%EC%9C%BC%EB%A1%9C-%EC%83%9D%ED%83%9C%EA%B3%84-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+**`Mar 2025 – Apr 2025`** \| [**GitHub Repository**](https://github.com/kar7mp5/SurvivalRL) \| [**Blog**](https://kar7mp5.tistory.com/entry/Reinforcement-Learning-Python-Matplotlib%EC%9C%BC%EB%A1%9C-%EC%83%9D%ED%83%9C%EA%B3%84-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
 
 This is a project where an AI agent learns to survive on its own in a 3D survival shooting game. Using the PPO (Proximal Policy Optimization) algorithm, the agent discovers the optimal strategy for shooting enemies and dodging bullets.
 
