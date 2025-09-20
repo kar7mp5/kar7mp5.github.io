@@ -15,8 +15,6 @@ title: About Me
 - **Undergraduate research student in nursing department** (2024.10-12)
 - **Undergraduate research student in aerospace engineering** (2025.01~Present)
 
----
-
 ## OpenSource
 
 ### Python Libraries
@@ -31,8 +29,6 @@ title: About Me
   Developed a crawler for collecting news by category from Notion.
   During development, access to Notion's database was challenging, leading to the creation of a Python library for better integration.
   I set up a server running on a Raspberry Pi that works every 4 hours to upload relevant news to Notion.
-
----
 
 ## Projects
 
@@ -54,8 +50,6 @@ In this project, I developed a 2D drone simulator from scratch using Pygame, des
 #### Core Technologies
 
 - `Python`, `Pygame`, `NumPy`
-
----
 
 ### MinGPT: An LLM Implementation Based on 'Attention Is All You Need'
 
@@ -87,8 +81,6 @@ To develop an AI that can survive by eliminating enemies in a 3D environment.
 #### Core Technologies
 
 - `ML-Agents`, `PyTorch`, `PPO Algorithm`
-
----
 
 ## Awards
 
