@@ -226,7 +226,7 @@ $$
 For any two $n$-vectors $\mathbf{a}$ and $\mathbf{b}$, the absolute value of their dot product is less than or equal to the product of their norms.
 
 $$
-|\mathbf{a}^T\mathbf{b}| \leq \|\mathbf{a}\|\|\mathbf{b}\|
+\lvert\mathbf{a}^T\mathbf{b}\rvert \leq \lVert\mathbf{a}\rVert\lVert\mathbf{b}\rVert
 $$
 
 This is true because the geometric definition of the dot product is $\|\mathbf{a}\|\|\mathbf{b}\|\cos(\theta)$, and the absolute value $|\cos(\theta)|$ cannot exceed 1. Written out in terms of their components, the inequality is:
@@ -262,3 +262,5 @@ Taking the square root of both sides completes the proof of the triangle inequal
 $$
 \|\mathbf{a}+\mathbf{b}\| \leq \|\mathbf{a}\| + \|\mathbf{b}\|
 $$
+
+---
