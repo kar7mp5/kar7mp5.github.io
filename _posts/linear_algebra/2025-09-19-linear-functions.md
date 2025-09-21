@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Linear functions"
-date: 2025-09-19 00:00:00 +0900
+date: 2025-09-19 09:00:00 +0900
 image: ../assets/posts/2025-09-19-linear-algebra-base-w2/linear_verus_affine.png
 categories: linear_algebra
 permalink: /20250919/linear-functions.html
