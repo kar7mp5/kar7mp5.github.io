@@ -49,8 +49,8 @@ $$
 \end{align*}
 $$
 
-![cluster1](assets/posts/2025-09-21-clustering/cluster.png)  
-![cluster1](assets/posts/2025-09-21-clustering/cluster2.png)
+![cluster1](../assets/posts/2025-09-21-clustering/cluster.png)  
+![cluster1](../assets/posts/2025-09-21-clustering/cluster2.png)
 
 ## 코드
 
