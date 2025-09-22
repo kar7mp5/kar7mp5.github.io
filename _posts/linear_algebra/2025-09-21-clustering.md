@@ -2,6 +2,7 @@
 layout: default
 title: "Clustering"
 date: 2025-09-21 09:00:00 +0900
+image: ../assets/posts/2025-09-21-clustering/cluster2.png
 categories: linear_algebra
 permalink: /20250921/clustering.html
 ---
@@ -47,3 +48,50 @@ $$
 &\text{until} \ z_1, \dots, z_k \text{stop changing}
 \end{align*}
 $$
+
+![cluster1](assets/posts/2025-09-21-clustering/cluster.png)  
+![cluster1](assets/posts/2025-09-21-clustering/cluster2.png)
+
+## 코드
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+
+data = np.concat([
+  np.random.randn(100, 2) + (10, 5),
+  np.random.randn(100, 2) + (5, 5),
+  np.random.randn(100, 2) + (-5, 5)
+])
+
+init_centre = data[0:3]
+
+print(init_centre)
+
+def kmeans(k):
+  for i in range(10):
+    dist = np.sum(np.sqrt((data[:] - init_centre[:, np.newaxis])**2), axis=2)
+    groups = np.argmin(dist, axis=0)
+
+    print(groups)
+
+    old_centroids = init_centre.copy()
+
+    for i in range(k):
+        if data[groups == i].shape[0] > 0:
+            init_centre[i] = data[groups == i].mean(axis=0)
+
+    if np.abs((init_centre - old_centroids).sum()) < 0.1:
+      break
+
+    plt.figure(figsize=(7, 5))
+    plt.title("$k$-means clustering")
+    plt.scatter(data[:, 0], data[:, 1], c=groups)
+    plt.scatter(old_centroids[:, 0], old_centroids[:, 1], c="red", label="centre")
+    plt.legend()
+    plt.show()
+
+kmeans(3)
+```
