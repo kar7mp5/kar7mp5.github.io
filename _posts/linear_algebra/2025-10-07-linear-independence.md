@@ -2,7 +2,6 @@
 layout: default
 title: "Linear independence"
 date: 2025-10-07 09:00:00 +0900
-image: ../assets/posts/2025-09-21-clustering/cluster2.png
 categories: linear_algebra
 permalink: /20251007/linear-independence.html
 ---
