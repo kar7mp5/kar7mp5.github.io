@@ -20,6 +20,8 @@ $$
 
 holds for some $\beta_1, \dots, \beta_k$ that are not all zero
 
+---
+
 ## Linear independence
 
 set of $n$-vectors ${a_1, \dots, a_k} \ (\text{with } k \geq 1)$ is linearly independent if
