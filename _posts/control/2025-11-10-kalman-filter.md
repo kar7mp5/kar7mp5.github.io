@@ -6,13 +6,13 @@ categories: control_system
 permalink: /20250829/2025-09-15-drone-simulation.html
 ---
 
-# Table of Contents
-
--   [Kalman filter](#kalman-filter)
-
 # Kalman filter
 
 Before learning Kalman filter, it's essential to understand Bayes' theorem, as the Kalman filter is fundamentally based on it.
+
+## Table of Contents
+
+-   [Kalman filter](#kalman-filter)
 
 ## Bayes' Theorem
 
