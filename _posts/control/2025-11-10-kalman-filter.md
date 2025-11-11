@@ -6,18 +6,48 @@ categories: control_system
 permalink: /20250829/2025-09-15-drone-simulation.html
 ---
 
+# Table of Contents
+
+-   [Kalman filter](#kalman-filter)
+
 # Kalman filter
 
-## What is baysian filter?
+Before learning Kalman filter, it's essential to understand Bayes' theorem, as the Kalman filter is fundamentally based on it.
 
-To know kalman filter, we need to learn baysian filter first.
+## Bayes' Theorem
 
-### Baysian Theory
+The [Bayes' Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) is an approach to statistical inference, where it is used to invert the probability of observations given a model configuration.
+
+### Statement of theorem
+
+Bayes' theorem is stated mathmatically as the following equation:
 
 $$
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+$$
 
+where $A$ and $B$ are events and $P(B) \neq 0$.
+
+-   $P(A|B)$ is a [conditional probability](https://en.wikipedia.org/wiki/Conditional_probability); the probability of event $A$ occurring given that $B$ is true.
+-   $P(B|A)$ is also a conditional probability; the probability of event $B$ occurring given that $A$ is true.
+
+### Proof
+
+#### For events (Discrete)
 
 $$
+P(A|B) = \frac{P(A \cap B)}{P(B)},\ \text{if} \ P(B) \neq 0
+$$
+
+where $P(A \cap B)$ is the probability of both $A$ and $B$ being true. Similarly,
+
+$$
+P(B|A) = \frac{P(A \cap B)}{P(A)},\ \text{if} \ P(A) \neq 0
+$$
+
+Solving for $P(A \cap B)$ and substituting into the above expression for $P(A|B)$
+
+## Bayes' Filter
 
 ## What is Kalman filter?
 
