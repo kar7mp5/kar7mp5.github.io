@@ -3,7 +3,7 @@ layout: default
 title: "Kalman filter"
 date: 2025-11-10 00:09:00 +0900
 categories: control_system
-permalink: /20250829/2025-09-15-drone-simulation.html
+permalink: /20250829/2025-11-10-kalman-filter.html
 ---
 
 # Kalman filter
