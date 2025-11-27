@@ -13,10 +13,10 @@ permalink: /20251127/lipschitz-function-and-constant.html
 A function $f$ is called Lipschitz continous (or just Lipschitz) if there exists a constant $L \geq 0$ such that for all points $x$ and $y$ in the domain
 
 $$
-|f(x) - f(y)| \leq L \cdot |x - y|
+\|f(x) - f(y)\| \leq L \cdot \|x - y\|
 $$
 
-(or more generally, $||f(x) - f(y)|| \leq L \cdot ||x - y||$ in higher dimensions).
+(or more generally, $\|\|f(x) - f(y)\|\| \leq L \cdot \|\|x - y\|\|$ in higher dimensions).
 
 The output of the function can't change faster than a fixed multiple of how much the input changes. In other words, the function is not allowed to have infinitely steep slopes.
 
