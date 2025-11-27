@@ -30,10 +30,10 @@ The number $L$ in the inequality above is called the Lipschitz constant of the f
 
 ## Examples
 
-|             Function             | Is it Lipschitz? |       Lipschitz Constant (example)        |
-| :------------------------------: | :--------------: | :---------------------------------------: |
-|         $f(x) = 5x + 2$          |       Yes        |                  $L = 5$                  |
-|         $f(x) = \sin(x)$         |       Yes        |   $L = 1$ (because the derivative ≤ 1)    |
-|    $f(x) = x^2$ on $[-1, 1]$     |       Yes        |        $L = 2$ (on this interval)         |
+| Function                         | Is it Lipschitz? | Lipschitz Constant (example)              |
+| -------------------------------- | :--------------: | ----------------------------------------- |
+| $f(x) = 5x + 2$                  |       Yes        | $L = 5$                                   |
+| $f(x) = \sin(x)$                 |       Yes        | $L = 1$ (because the derivative ≤ 1)      |
+| $f(x) = x^2$ on $[-1, 1]$        |       Yes        | $L = 2$ (on this interval)                |
 | $f(x) = x^2$ on all real numbers |        No        | Not bounded (gets steeper as \|x\| grows) |
-|   $f(x) = \sqrt{x} $ on [0, ∞)   |        No        |       Slope becomes infinite near 0       |
+| $f(x) = \sqrt{x} $ on [0, ∞)     |        No        | Slope becomes infinite near 0             |
