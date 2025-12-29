@@ -27,8 +27,7 @@ url: "https://kar7mp5.github.io"
 twitter_username: dev_kar7mp5
 github_username: kar7mp5
 
-google_analytics:
-  id: G-S4256BJGT7
+google_analytics: G-S4256BJGT7
 # Build settings
 remote_theme: francescobianco/jekyll-html-pages@main
 # theme: minima (기존 테마 주석 처리)
