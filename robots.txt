@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: [https://kar7mp5.github.io/sitemap.xml](https://jsy1110.github.io/sitemap.xml)
+Sitemap: https://kar7mp5.github.io/sitemap.xml
