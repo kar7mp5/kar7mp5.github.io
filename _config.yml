@@ -37,9 +37,9 @@ plugins:
 
 sitemap:
   include:
-    - /projects/
-    - /portfolio/
-    - /opensource/
+    - /categories/projects/
+    - /categories/portfolio/
+    - /categories/opensource/
   exclude:
     - /assets/**           # if you want to drop CSS/JS files
 
