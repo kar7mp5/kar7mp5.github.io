@@ -36,13 +36,23 @@ plugins:
   - jekyll-feed
 
 sitemap:
-  include:
-    - /categories/projects/
-    - /categories/portfolio/
-    - /categories/opensource/
   exclude:
-    - /assets/**           # if you want to drop CSS/JS files
+    - 'google9b3fd3916bdfd570.html'  # GSC verification 숨김
+    - 'HANDOFF.html'                 # 불필요 파일
 
+# changefreq/priority는 front matter에서만 지원 (plugin 한계)
+defaults:
+  - scope:
+      path: ""  # 모든 페이지 기본
+    values:
+      changefreq: monthly
+      priority: 0.5
+  - scope:
+      path: ""  # 홈페이지 우선
+      type: home
+    values:
+      changefreq: daily
+      priority: 1.0
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
