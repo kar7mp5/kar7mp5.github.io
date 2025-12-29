@@ -28,8 +28,8 @@ $$
 
 where $A$ and $B$ are events and $P(B) \neq 0$.
 
--   $P(A|B)$ is a [conditional probability](https://en.wikipedia.org/wiki/Conditional_probability); the probability of event $A$ occurring given that $B$ is true.
--   $P(B|A)$ is also a conditional probability; the probability of event $B$ occurring given that $A$ is true.
+-   $P(A\|B)$ is a [conditional probability](https://en.wikipedia.org/wiki/Conditional_probability); the probability of event $A$ occurring given that $B$ is true.
+-   $P(B\|A)$ is also a conditional probability; the probability of event $B$ occurring given that $A$ is true.
 
 ### Proof
 
@@ -45,7 +45,7 @@ $$
 P(B|A) = \frac{P(A \cap B)}{P(A)},\ \text{if} \ P(A) \neq 0
 $$
 
-Solving for $P(A \cap B)$ and substituting into the above expression for $P(A|B)$
+Solving for $P(A \cap B)$ and substituting into the above expression for $P(A\|B)$
 
 ## Bayes' Filter
 
@@ -62,4 +62,3 @@ $$
 -   $x_k$: State at time $k$
 -   $F$: State transition matrix
 -   $w_k$: Process noise, Gaussian with mean $0$ and convariance $Q(w_k ~ N(0, Q))$, representing model uncertainty.
--
