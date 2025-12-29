@@ -7,7 +7,7 @@ permalink: /projects/
 # Projects
 
 <ul style="list-style: none; padding: 0;">
-  {% for post in site.posts %}
+  {% for post in site.projects %}
   <li>
     <a href="{{ post.url }}"
        style="display: flex; align-items: flex-start; gap: 20px; text-decoration: none; color: inherit; padding: 20px 0;">
