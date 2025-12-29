@@ -35,6 +35,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
+sitemap:
+  include:
+    - /projects/
+    - /portfolio/
+    - /opensource/
+  exclude:
+    - /assets/**           # if you want to drop CSS/JS files
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
