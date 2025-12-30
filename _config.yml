@@ -45,15 +45,25 @@ defaults:
   - scope:
       path: ""  # 모든 페이지 기본
     values:
-      changefreq: monthly
+      sitemap: true
+      changefreq: weekly
       priority: 0.5
   - scope:
       path: ""  # 홈페이지 우선
-      type: home
+      type: pages
     values:
       changefreq: daily
       priority: 1.0
-
+  - scope:
+      path: "_posts"  # 블로그 포스트
+    values:
+      changefreq: weekly
+      priority: 0.8
+  - scope:
+      path: "_projects"  # 프로젝트 컬렉션
+    values:
+      changefreq: monthly
+      priority: 0.7
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
