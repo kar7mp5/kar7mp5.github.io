@@ -17,7 +17,6 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
 title: Kar7mp5's Dev Blog
 email: tommy1005a@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -26,44 +25,42 @@ baseurl: "" # dev-blog 경로는 더 이상 사용하지 않음. 모든 경로�
 url: "https://kar7mp5.github.io"
 twitter_username: dev_kar7mp5
 github_username: kar7mp5
-
 google_analytics: G-8DGXZ3HNKN
 # Build settings
 remote_theme: francescobianco/jekyll-html-pages@main
 # theme: minima (기존 테마 주석 처리)
+permalink: none  # .html 확장자 제거 (e.g., /aboutme.html → /aboutme)
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-
 sitemap:
   exclude:
     - 'google9b3fd3916bdfd570.html'  # GSC verification 숨김
     - 'HANDOFF.html'                 # 불필요 파일
-
-# changefreq/priority는 front matter에서만 지원 (plugin 한계)
+    - '/feed.xml'                    # 피드 제외 (필요 시)
 defaults:
   - scope:
-      path: ""  # 모든 페이지 기본
+      path: ""  # 모든 페이지 기본 (daily, 0.5로 통일)
     values:
       sitemap: true
-      changefreq: weekly
+      changefreq: daily
       priority: 0.5
   - scope:
-      path: ""  # 홈페이지 우선
-      type: pages
+      type: "posts"  # 개별 포스트 제외
     values:
-      changefreq: daily
-      priority: 1.0
+      sitemap: false
   - scope:
-      path: "_posts"  # 블로그 포스트
+      type: "projects"  # 개별 프로젝트 항목 제외 (목록 페이지만 포함)
     values:
-      changefreq: weekly
-      priority: 0.8
+      sitemap: false
   - scope:
-      path: "_projects"  # 프로젝트 컬렉션
+      type: "opensource"  # 개별 오픈소스 항목 제외
     values:
-      changefreq: monthly
-      priority: 0.7
+      sitemap: false
+  - scope:
+      type: "portfolio"  # 개별 포트폴리오 항목 제외
+    values:
+      sitemap: false
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -83,7 +80,6 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
 collections:
   projects:
     output: true
