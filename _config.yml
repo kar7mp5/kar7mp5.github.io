@@ -26,6 +26,9 @@ url: "https://kar7mp5.github.io"
 twitter_username: dev_kar7mp5
 github_username: kar7mp5
 google_analytics: G-8DGXZ3HNKN
+author: Kar7mp5  # Added: For Schema.org/author meta in head.html
+keywords: "linear algebra, control system, convex optimization, development, kar7mp5, mathjax, jemdoc"  # Added: Global fallback for meta keywords (from your SEO report's common keywords)
+
 # Build settings
 remote_theme: francescobianco/jekyll-html-pages@main
 # theme: minima (기존 테마 주석 처리)
@@ -33,11 +36,22 @@ permalink: none  # .html 확장자 제거 (e.g., /aboutme.html → /aboutme)
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-minifier
+
+# jekyll-minifier configuration (Added: To auto-minify CSS/JS/HTML for performance/SEO fixes)
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  compress_html: true
+  uglifier_args:
+    harmony: true
+
 sitemap:
   exclude:
     - 'google9b3fd3916bdfd570.html'  # GSC verification 숨김
     - 'HANDOFF.html'                 # 불필요 파일
     - '/feed.xml'                    # 피드 제외 (필요 시)
+
 defaults:
   - scope:
       path: ""  # 모든 페이지 기본 (daily, 0.5로 통일)
@@ -61,6 +75,7 @@ defaults:
       type: "portfolio"  # 개별 포트폴리오 항목 제외
     values:
       sitemap: false
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -80,6 +95,7 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 collections:
   projects:
     output: true
