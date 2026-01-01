@@ -1,67 +1,79 @@
 <head>
-  <!-- Character encoding and viewport for responsiveness -->
+  <!-- 기본 메타 -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Dynamic title -->
-  <title>{{ page.title | default: site.title | default: "Kar7mp5's Dev Blog" }}</title>
+  <!-- 제목 -->
+  {% assign site_title = site.title | default: "Kar7mp5's Dev Blog" %}
+  {% assign page_title = page.title | default: site_title %}
+  <title>{{ page_title }}</title>
 
-  <!-- Meta description -->
-  <meta name="description" content="{{ page.description | default: site.description | default: 'Kar7mp5\'s Dev Blog - aerospace, control systems, linear algebra, C++/MATLAB projects' }}">
+  <!-- Meta Description -->
+  {% assign site_desc = site.description | default: "Kar7mp5's Dev Blog - 항공우주, 제어 시스템, 선형대수, C++/MATLAB 개발 경험 공유" %}
+  {% assign page_desc = page.description | default: site_desc %}
+  <meta name="description" content="{{ page_desc }}">
 
-  <!-- Keywords (hardcoded fallback – later you can make dynamic) -->
+  <!-- Keywords (static fallback – 에러 방지) -->
   <meta name="keywords" content="linear algebra, control system, convex optimization, development, kar7mp5, mathjax, jemdoc">
 
   <!-- Author -->
-  <meta name="author" content="{{ site.author | default: 'Kar7mp5' }}">
+  {% assign author_name = site.author | default: "Kar7mp5" %}
+  <meta name="author" content="{{ author_name }}">
 
-  <!-- Google Search Console verification -->
+  <!-- Google Search Console 소유권 확인 -->
   <meta name="google-site-verification" content="AgTw2yxDZycW_yVADdG0W8P9BLPJT5z6PZcrXX17Lwg" />
 
-  <!-- Canonical URL
-  <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+  <!-- Canonical URL -->
+  {% assign canonical_url = site.url | append: page.url | replace: "index.html", "" %}
+  <link rel="canonical" href="{{ canonical_url }}">
 
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <!-- OpenGraph 기본 -->
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:site_name" content="{{ site_title }}">
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}"> -->
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
 
-  <!-- Schema.org (date 부분 제거 – 에러 원인) -->
+  <!-- Schema.org 기본 (날짜 필터 제거해서 에러 방지) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "{{ site.title }}",
+    "name": "{{ site_title }}",
     "url": "{{ site.url }}",
-    "description": "{{ site.description }}",
+    "description": "{{ site_desc }}",
     "author": {
       "@type": "Person",
-      "name": "Kar7mp5"
+      "name": "{{ author_name }}"
     }
   }
   </script>
 
-  <!-- CSS -->
+  <!-- CSS 파일 -->
   <link rel="stylesheet" href="{{ '/assets/css/jemdoc.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/rouge-github.css' | relative_url }}">
 
-  <!-- MathJax -->
+  <!-- MathJax (수식 렌더링) -->
   <script>
-    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <!-- Code copy JS -->
+  <!-- 코드 복사 버튼 JS -->
   <script src="{{ '/assets/js/code-copy.js' | relative_url }}"></script>
 
-  <!-- Favicon -->
-  <link rel="icon" href="{{ '/assets/img/profile.png' | relative_url }}">
+  <!-- Favicon (필요하면 업로드) -->
+  <!-- <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}"> -->
 
-  <!-- Robots -->
+  <!-- 검색 엔진 허용 -->
   <meta name="robots" content="index, follow">
 </head>
