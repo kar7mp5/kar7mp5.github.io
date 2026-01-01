@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+  {% include head.html %}
   <meta charset="UTF-8">
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | default: 'Kar7mp5\'s Dev Blog - Sharing experiences in aerospace, control systems, linear algebra, and software development' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/jemdoc.css">
   <link rel="stylesheet" href="/assets/css/rouge-github.css">
   <script>
