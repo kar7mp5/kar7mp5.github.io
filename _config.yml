@@ -59,22 +59,6 @@ defaults:
       sitemap: true
       changefreq: daily
       priority: 0.5
-  - scope:
-      type: "posts"  # 개별 포스트 제외
-    values:
-      sitemap: false
-  - scope:
-      type: "projects"  # 개별 프로젝트 항목 제외 (목록 페이지만 포함)
-    values:
-      sitemap: false
-  - scope:
-      type: "opensource"  # 개별 오픈소스 항목 제외
-    values:
-      sitemap: false
-  - scope:
-      type: "portfolio"  # 개별 포트폴리오 항목 제외
-    values:
-      sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
