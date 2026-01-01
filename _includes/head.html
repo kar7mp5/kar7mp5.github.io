@@ -1,77 +1,69 @@
 <head>
-    <!-- Character encoding and viewport for responsiveness -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Character encoding and viewport for responsiveness -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Dynamic title -->
-    <title>{{ page.title | default: site.title | default: "Kar7mp5's Dev Blog" }}</title>
+  <!-- Dynamic title -->
+  <title>{{ page.title | default: site.title | default: "Kar7mp5's Dev Blog" }}</title>
 
-    <!-- Meta description for SEO (fixes missing description error) -->
-    <meta name="description" content="{{ page.description | default: site.description | default: 'Kar7mp5\'s Dev Blog - Sharing experiences in aerospace engineering, control systems, linear algebra, and software development with C++ and MATLAB.' }}">
+  <!-- Meta description -->
+  <meta name="description" content="{{ page.description | default: site.description | default: 'Kar7mp5\'s Dev Blog - aerospace, control systems, linear algebra, C++/MATLAB projects' }}">
 
-    <!-- Keywords for better search relevance (from your common keywords) -->
-    <meta name="keywords" content="linear algebra, control system, convex optimization, development, kar7mp5, mathjax, jemdoc">
-    
-    <!-- Author meta -->
-    <meta name="author" content="{{ site.author | default: 'Kar7mp5' }}">
+  <!-- Keywords (hardcoded fallback – later you can make dynamic) -->
+  <meta name="keywords" content="linear algebra, control system, convex optimization, development, kar7mp5, mathjax, jemdoc">
 
-    <!-- Google Site Verification (as provided) -->
-    <meta name="google-site-verification" content="AgTw2yxDZycW_yVADdG0W8P9BLPJT5z6PZcrXX17Lwg" />
+  <!-- Author -->
+  <meta name="author" content="{{ site.author | default: 'Kar7mp5' }}">
 
-    <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="AgTw2yxDZycW_yVADdG0W8P9BLPJT5z6PZcrXX17Lwg" />
 
-    <!-- OpenGraph meta tags for social sharing (fixes missing OG tags) -->
-    <meta property="og:title" content="{{ page.title | default: site.title }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:type" content="{{ page.og_type | default: 'article' }}">  <!-- 'website' for home, 'article' for posts -->
-    <meta property="og:image" content="{{ page.image | default: '/assets/img/og-image.png' | prepend: site.url }}">  <!-- Upload a default OG image -->
-    <meta property="og:site_name" content="{{ site.title }}">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
 
-    <!-- Twitter Card (extension of OG) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-    <meta name="twitter:image" content="{{ page.image | default: '/assets/img/og-image.png' | prepend: site.url }}">
+  <!-- OpenGraph basics (og:image는 일단 제거 – 에러 원인) -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
 
-    <!-- Schema.org structured data (fixes missing Schema.org data) -->
-    <script type="application/ld+json">
-    {
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+
+  <!-- Schema.org (date 부분 제거 – 에러 원인) -->
+  <script type="application/ld+json">
+  {
     "@context": "https://schema.org",
-    "@type": "{{ page.schema_type | default: 'BlogPosting' }}",
-    "headline": "{{ page.title | default: site.title }}",
-    "description": "{{ page.description | default: site.description }}",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
     "author": {
-        "@type": "Person",
-        "name": "Kar7mp5"
-    },
-    "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
-    "url": "{{ site.url }}{{ page.url }}",
-    "publisher": {
-        "@type": "Organization",
-        "name": "{{ site.title }}",
-        "logo": {
-        "@type": "ImageObject",
-        "url": "{{ '/assets/img/profile.png' | prepend: site.url }}"  <!-- Add a logo if available -->
-        }
+      "@type": "Person",
+      "name": "Kar7mp5"
     }
-    }
-    </script>
+  }
+  </script>
 
-    <!-- CSS links (from your site's report: jemdoc.css, rouge-github.css) -->
-    <link rel="stylesheet" href="{{ '/assets/css/jemdoc.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/rouge-github.css' | relative_url }}">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/jemdoc.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/rouge-github.css' | relative_url }}">
 
-    <!-- JavaScript (from report: code-copy.js; add MathJax for math content) -->
-    <script src="{{ '/assets/js/code-copy.js' | relative_url }}"></script>
-    <!-- MathJax for rendering equations (since keywords include mathjax) -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- MathJax -->
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Favicon (optional but good for branding) -->
-    <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">  <!-- Upload a favicon -->
+  <!-- Code copy JS -->
+  <script src="{{ '/assets/js/code-copy.js' | relative_url }}"></script>
 
-    <!-- Robots meta (optional: allow indexing) -->
-    <meta name="robots" content="index, follow">
+  <!-- Favicon -->
+  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
 
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
 </head>
