@@ -36,15 +36,6 @@ permalink: none  # .html 확장자 제거 (e.g., /aboutme.html → /aboutme)
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-minifier
-
-# jekyll-minifier configuration (Added: To auto-minify CSS/JS/HTML for performance/SEO fixes)
-jekyll-minifier:
-  compress_css: true
-  compress_javascript: true
-  compress_html: true
-  uglifier_args:
-    harmony: true
 
 sitemap:
   exclude:
