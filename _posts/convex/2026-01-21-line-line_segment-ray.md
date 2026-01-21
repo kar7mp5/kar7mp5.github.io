@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Line, Line segment, Ray"
-date: 2025-07-20 20:06:59 +0900
+date: 2026-01-21 12:00:59 +0900
 categories: convex_optimization
 permalink: /20250121/line-line_segment-ray.html
 ---
