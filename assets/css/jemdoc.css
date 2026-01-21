@@ -190,3 +190,33 @@ footer {
     padding: 1em;
   }
 }
+
+.toc {
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  padding: 1em 1.2em;
+  margin: 0 0 1.5em 0;
+}
+
+.toc-title {
+  font-weight: bold;
+  margin-bottom: 0.6em;
+}
+
+.toc-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.toc-list li {
+  margin: 0.3em 0;
+}
+
+.toc-list a {
+  color: #1a4d8f;
+  text-decoration: none;
+}
+
+.toc-list a:hover {
+  text-decoration: underline;
+}
