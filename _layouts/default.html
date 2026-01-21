@@ -6,15 +6,17 @@
     {% include sidebar.html %}
     <div class="main-content">
       <main>
-        {% if page.collection == "posts" and page.toc != false %}
-        <nav class="toc" aria-label="Table of contents">
-          <div class="toc-title">목차</div>
-          <ol class="toc-list"></ol>
-        </nav>
-        {% endif %}
-        <article class="post-content">
-          {{ content }}
-        </article>
+        <div class="content-layout">
+          <article class="post-content">
+            {{ content }}
+          </article>
+          {% if page.collection == "posts" and page.toc != false %}
+          <aside class="toc" aria-label="Table of contents">
+            <div class="toc-title">목차</div>
+            <ul class="toc-list"></ul>
+          </aside>
+          {% endif %}
+        </div>
       </main>
       {% include footer.html %}
     </div>

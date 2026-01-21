@@ -54,7 +54,7 @@
         if (!lastItem) {
           break;
         }
-        var nestedList = document.createElement("ol");
+        var nestedList = document.createElement("ul");
         lastItem.appendChild(nestedList);
         listStack.push(nestedList);
         currentList = nestedList;
