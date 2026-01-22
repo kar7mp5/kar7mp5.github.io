@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Rank and Nullity"
+title: "[Gilbert Strang] Rank and Nullity"
 date: 2026-01-22 09:00:00 +0900
 categories: linear_algebra
 permalink: /20260122/rank-and-nullity.html

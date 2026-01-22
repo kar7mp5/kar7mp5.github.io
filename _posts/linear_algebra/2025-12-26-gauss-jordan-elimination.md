@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Gauss-Jordan Elimination"
+title: "[Gilbert Strang] Gauss-Jordan Elimination"
 date: 2025-12-26 09:00:00 +0900
 categories: linear_algebra
 permalink: /20251226/gauss-jordan-elimination.html
