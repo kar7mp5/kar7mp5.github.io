@@ -11,6 +11,7 @@ permalink: /20260122/rank-and-nullity.html
 > nullity는 아무 정보도 안 주는 방향의 개수
 
 $A$ 는 $3 \times 4$ 행렬에 $x \in \mathbb{R}^4$ 일 때 다음 식을 보자.  
+
 $$
 Ax = 0
 $$
@@ -43,6 +44,7 @@ $x \neq 0$ 인데 $Ax = 0$ 이런 $x$ 들의 공간이 **null space**
 그 공간의 차원이 **nullity** 이다.  
 
 ### 일반해는 왜 null space의 basis가 될까?  
+
 $$
 x = s \begin{bmatrix}
 -3 \\ 1 \\ 0 \\ 0
@@ -58,6 +60,7 @@ $$
 - nullity = 2
 
 때문에 다음이 성립된다.  
+
 $$
 \text{Rank}\ +\ \text{Nullity} = \text{열의 개수}
 $$
