@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Echelon Form"
+title: "[Gilbert Strang] Echelon Form"
 date: 2026-01-22 09:00:00 +0900
 categories: linear_algebra
 permalink: /20260122/echelon-form.html
