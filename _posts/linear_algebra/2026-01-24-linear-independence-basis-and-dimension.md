@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "[Gilbert Strang] Linear independence, Basis, and Dimension"
-date: 2026-01-24 09:00:00 +0900
+date: 2026-01-24 01:00:00 +0900
 categories: linear_algebra
-permalink: /20260124/linear-independence-Basis-and-dimension.html
+permalink: /20260124/linear-independence-basis-and-dimension.html
 ---
 
 # Linear independence, Basis, and Dimension
