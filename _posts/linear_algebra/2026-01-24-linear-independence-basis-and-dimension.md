@@ -64,7 +64,7 @@ $$
 $A$ 의 row들에 대해서도 성립한다.  
 
 $$
-c_1\left(3, 4, 2\right) + c_2\left(0, 1, 5\right)  c_3\left(0, 0, 2\right) = \left(0, 0, 0\right)
+c_1\left(3, 4, 2\right) + c_2\left(0, 1, 5\right) + c_3\left(0, 0, 2\right) = \left(0, 0, 0\right)
 $$
 
 non-zero row들을 가진 [echelon matrix](https://en.wikipedia.org/wiki/Row_echelon_form) $U$ 는 무조건 independent 하다.  
@@ -93,7 +93,7 @@ $A$ 의 column 공간은 column에 의해 **span** 되었다.  이 combination�
 ## Basis for a Vector Space
 $Ax = b$ 를 해결해보자.  
 그리고 만약 column들이 independent 하다면, 우리는 $Ax = 0$ 을 푸는 것이다.  
-Span은 column 공간과 indelpendence는 nullspace를 포함한다.  
+Span은 column 공간과 independence는 nullspace를 포함한다.  
 벡터 $e_1, \dots, e_n$ 로 구성된 span $\mathbb{R}^n$ 에서 linearly independent 하다.  
 쉽게 말해, 어떤 벡터도 낭비되지 않다는 것이다.  
 이 아이디어가 **basis** 에서 가장 중요한 부분 중 하나다.  
