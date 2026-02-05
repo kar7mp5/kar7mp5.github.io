@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "Storing matrices in programs"
-date: 2025-08-21 09:00:00 +0900
+date: 2026-02-05 09:00:00 +0900
 categories: development
-permalink: /20250808/smart-pointer.html
+permalink: /20260205/storing-matrices-in-programs.html
 ---
 
 # Storing matrices in programs
