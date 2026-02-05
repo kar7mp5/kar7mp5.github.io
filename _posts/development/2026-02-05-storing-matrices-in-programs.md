@@ -47,7 +47,7 @@ typedef struct
 - `block->data`는 길게 쭉 깔린 `double` 배열인데,
 - `gsl_matrix`는 그걸 **(size1 × size2) 2차원처럼 보이게** 만들고,
 - `tda`(leading dimension)는 “한 행에서 다음 행으로 넘어갈 때 몇 칸 점프해야 하는지”를 정한다.
-#### 행렬은 보통 1차원 배열로 저장된다 (row-major + tda)
+### 행렬은 보통 1차원 배열로 저장된다 (row-major + tda)
 C에서 행렬은 보통 메모리에 이렇게 저장된다.  
 - `data`가 `double data[ ... ]` 형태로 **연속 메모리**를 가진다
 - `(i, j)` 원소는 보통 다음처럼 접근한다:
