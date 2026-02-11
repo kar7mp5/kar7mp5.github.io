@@ -15,6 +15,7 @@ permalink: /20260211/Linformer-Self-Attention-with-Linear-Complexity.html
 $$
 \text{head} = \operatorname{Attention}(Q,K,V) = \underbrace{\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d}}\right)V}_{P \in \mathbb{R}^{n\times n}}
 $$
+
 - $Q, K, V \in \mathbb{R}^{n\times d}$ 
 - $QK^T \in \mathbb{R}^{n \times n}$ 
 - 시간 복잡도: $O(n^2)$ 
