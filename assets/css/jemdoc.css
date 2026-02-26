@@ -204,6 +204,14 @@ footer {
   .content-layout {
     flex-direction: column;
   }
+
+  .post-content {
+    order: 1;
+  }
+
+  .toc {
+    order: 0;
+  }
 }
 
 .toc {
